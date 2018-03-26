@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>留言</title>
+  <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="index_todo.css">
+</head>
+<body>
+	<div id="app" v-cloak>
+		<div class="message">
+			<v-input v-model="username"></v-input>
+			<v-textarea v-model="message" ref="message"></v-textarea>
+			<button @click="handleSend">发布</button>
+		</div>
+		<list :list="list" @reply="handleReply">
+	</div>
+
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+	<script src="input.js"></script>
+	<script src="list.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
